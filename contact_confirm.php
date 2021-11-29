@@ -58,9 +58,9 @@ $_SESSION['contact']['message'] = $message;
 <!-- entryform -->
 <section class="">
   <div class="entryform">
-      <h2 class="lp-title entryform"></h2>
+      <h2 class="lp-title entryform">お問い合わせ内容確認</h2>
       <div class="main-entryform-001">
-      <p class="text-001">お問い合わせ内容確認</p>
+      <p class="text-001"></p>
       <form id="entryform" method="post" action="./contact_confirm.php">
       <table>
       <tbody>
@@ -125,7 +125,7 @@ $_SESSION['contact']['message'] = $message;
       </tbody>
       </table>
       <p>ご入力いただきました個人情報等の内容は、厳重に管理いたします。</p>
-      <div class="submit"><input type="submit" value="確認する" /></div>
+      <div class="submit"><input type="submit" value="送信する" /></div>
       <p><a href="./contact_form.php">戻る</a></p>
       </form>
       </div>

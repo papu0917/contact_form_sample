@@ -108,7 +108,7 @@ session_start();
 <!-- entryform -->
 <section class="">
   <div class="entryform">
-      <h2 class="lp-title entryform"><span class="contact__title first">永代供養付墓所のこと<br>小江戸聖地霊園のことをもっと知りたい方</span><br>資料請求はこちらから!</h2>
+      <h2 class="lp-title entryform">資料請求はこちらから!</h2>
       <div class="main-entryform-001">
       <p class="text-001">無料で詳しい資料を送付いたします。<br>下記のフォームに必要事項をご入力の上、最後に送信ボタンを押してください。<br>後日、お客様へ詳しいご案内資料をさしあげます。</p>
       <form id="entryform" method="post" action="./contact_confirm.php">
