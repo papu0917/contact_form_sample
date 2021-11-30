@@ -3,7 +3,6 @@ session_start();
 // unset($_SESSION['contact']);
 
 $loop = count($_SESSION["contact"]["questions"]);
-var_dump($_SESSION['contact']['message']);
 ?>
 
 <!DOCTYPE html>
