@@ -12,28 +12,18 @@ $address = filter_input(INPUT_POST, 'address');
 $questions = filter_input(INPUT_POST, 'question', FILTER_DEFAULT,FILTER_REQUIRE_ARRAY);
 $message = filter_input(INPUT_POST, 'message');
 
-$_SESSION['contact']['lastName'] = $lastName;
-$_SESSION['contact']['firstName'] = $firstName;
-$_SESSION['contact']['tel'] = $tel;
-$_SESSION['contact']['email'] = $email;
-$_SESSION['contact']['zip'] = $zip;
-$_SESSION['contact']['state'] = $state;
-$_SESSION['contact']['city'] = $city;
-$_SESSION['contact']['address'] = $address;
-$_SESSION['contact']['questions'] = $questions;
-$_SESSION['contact']['message'] = $message;
-
-
-
-// var_dump($lastName);
-// var_dump($firstName);
-// var_dump($email);
-// var_dump($tel);
-// var_dump($zip);
-// var_dump($city);
-// var_dump($address);
-// var_dump($questions);
-// var_dump($message);
+$_SESSION['contact'] = [
+  'lastName' => $lastName,
+  'firstName' => $firstName,
+  'tel' => $tel,
+  'email' => $email,
+  'zip' => $zip,
+  'state' => $state,
+  'city' => $city,
+  'address' => $address,
+  'questions' => $questions,
+  'message' => $message
+];
 ?>
 <!DOCTYPE html>
 <html lang="ja">
