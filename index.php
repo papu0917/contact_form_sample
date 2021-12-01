@@ -175,7 +175,7 @@ var picker = new Pikaday({
       <h2 class="lp-title entryform">資料請求はこちらから!</h2>
       <div class="main-entryform-001">
       <p class="text-001">無料で詳しい資料を送付いたします。<br>下記のフォームに必要事項をご入力の上、最後に送信ボタンを押してください。<br>後日、お客様へ詳しいご案内資料をさしあげます。</p>
-      <form id="entryform" method="post" action="./contact_confirm.php">
+      <form id="entryform" method="post" action="./confirm.php">
       <table>
       <tbody>
       <tr>
