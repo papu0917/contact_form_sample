@@ -16,6 +16,27 @@ $stateList = [
   '39'=>'高知県', '40'=>'福岡県','41'=>'佐賀県', '42'=>'長崎県', '43'=>'熊本県', 
   '44'=>'大分県', '45'=>'宮崎県','46'=>'鹿児島県', '47'=>'沖縄県'
 ];
+
+/**
+ * チェックボックスの内容がセッションの情報と合っているかをif文でチェックしている
+ */
+foreach ($_SESSION['contact']['questions'] as $question) {
+  if ($question === '現地') {
+    $question1 = 'checked';
+  }
+  if ($question === '折込チラシ') {
+    $question2 = 'checked';
+  }
+  if ($question === 'ネットの広告') {
+    $question3 = 'checked';
+  }
+  if ($question === '検索サイト') {
+    $question4 = 'checked';
+  }
+  if ($question === 'その他') {
+    $question5 = 'checked';
+  }
+}
 ?>
 <!DOCTYPE html>
 <html lang="ja">
