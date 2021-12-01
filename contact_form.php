@@ -37,6 +37,8 @@ foreach ($_SESSION['contact']['questions'] as $question) {
     $question5 = 'checked';
   }
 }
+
+
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -45,9 +47,10 @@ foreach ($_SESSION['contact']['questions'] as $question) {
 <link rel="icon" type="image/png" href="./images/favicon.png">
 <link rel="stylesheet" href="./css/reset.css">
 <link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="./css/pikaday.css" type="text/css" media="all" />
 <script src="https://kit.fontawesome.com/f273e6126d.js" crossorigin="anonymous"></script>
 <script type="text/javascript" src="./js/jquery-1.11.2.min.js"></script>
-<!-- <script type="text/javascript" src="./js/jquery.validate.js"></script> -->
+<script type="text/javascript" src="./js/jquery.validate.js"></script>
 <script type="text/javascript" src="//jpostal-1006.appspot.com/jquery.jpostal.js"></script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -226,8 +229,8 @@ var picker = new Pikaday({
       <td>建物名・部屋番号</td><td><input type="text" name="address" value="<?php if (!empty($_SESSION["contact"]["address"])) echo $_SESSION["contact"]["address"] ?>"/></td>
       </tr>
       <tr>
-      <td>アンケート</td>
-      <td>当サイトをどこで知りましたか？<br>
+        <td>アンケート</td>
+        <td>当サイトをどこで知りましたか？<br>
           <label><input type="checkbox" name="question[]" value="現地" <?php echo $question1 ?>/>現地</label>
           <label><input type="checkbox" name="question[]" value="折込チラシ" <?php echo $question2 ?>/> 折込チラシ</label>
           <label><input type="checkbox" name="question[]" value="ネットの広告" <?php echo $question3 ?>/> ネットの広告</label>
@@ -242,7 +245,7 @@ var picker = new Pikaday({
             <input name="date1" class="date" type="text" placeholder="日付を選択してください" value="<?php if (!empty($_SESSION["contact"]["date1"])) echo $_SESSION["contact"]["date1"]; ?>" style="width:180px; margin: 8px;" /> 
           <br>希望日&#9313; 
             <input name="date2" class="date" type="text" placeholder="日付を選択してください" value="<?php if (!empty($_SESSION["contact"]["date2"])) echo $_SESSION["contact"]["date2"]; ?>" style="width:180px; margin: 8px;" />
-      </td>
+        </td>
       </tr>
       <tr>
       <td>その他ご要望等</td>
@@ -257,15 +260,8 @@ var picker = new Pikaday({
       </div>
       </div>
 </section>
-
-
-
 </section>
 </main>
-
-
-
-
 <!--/wrapper--></div>
 
 <!-- jQueryUI DatePicker -->
