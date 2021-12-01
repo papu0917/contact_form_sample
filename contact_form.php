@@ -228,11 +228,12 @@ var picker = new Pikaday({
       <tr>
       <td>アンケート</td>
       <td>当サイトをどこで知りましたか？<br>
-        <label><input type="checkbox" name="question[]" value="現地" <?php if ($_SESSION["contact"]["questions"] == "現地") echo 'checked="checked"'; ?>/> 現地</label>
-        <label><input type="checkbox" name="question[]" value="折込チラシ" <?php if ($_SESSION["contact"]["questions"] == "折込チラシ") echo 'checked="checked"'; ?>/>  折込チラシ</label>
-        <label><input type="checkbox" name="question[]" value="ネットの広告" <?php if ($_SESSION["contact"]["questions"] == "ネットの広告") echo 'checked="checked"'; ?>/> ネットの広告</label>
-        <label><input type="checkbox" name="question[]" value="検索サイト" /> 検索サイト</label>
-        <label><input type="checkbox" name="question[]" value="その他" /> その他</label>
+          <label><input type="checkbox" name="question[]" value="現地" <?php echo $question1 ?>/>現地</label>
+          <label><input type="checkbox" name="question[]" value="折込チラシ" <?php echo $question2 ?>/> 折込チラシ</label>
+          <label><input type="checkbox" name="question[]" value="ネットの広告" <?php echo $question3 ?>/> ネットの広告</label>
+          <label><input type="checkbox" name="question[]" value="検索サイト" <?php echo $question4 ?>/> 検索サイト</label>
+          <label><input type="checkbox" name="question[]" value="その他" <?php echo $question5 ?>/> その他</label>
+        </td>
       </td>
       </tr>
       <tr>
