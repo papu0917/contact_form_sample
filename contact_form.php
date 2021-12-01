@@ -234,6 +234,14 @@ var picker = new Pikaday({
           <label><input type="checkbox" name="question[]" value="検索サイト" <?php echo $question4 ?>/> 検索サイト</label>
           <label><input type="checkbox" name="question[]" value="その他" <?php echo $question5 ?>/> その他</label>
         </td>
+      </tr>
+      <tr>
+        <td>ご見学希望日</td>
+        <td>第2希望日までご入力ください。
+          <br>希望日&#9312; 
+            <input name="date1" class="date" type="text" placeholder="日付を選択してください" value="<?php if (!empty($_SESSION["contact"]["date1"])) echo $_SESSION["contact"]["date1"]; ?>" style="width:180px; margin: 8px;" /> 
+          <br>希望日&#9313; 
+            <input name="date2" class="date" type="text" placeholder="日付を選択してください" value="<?php if (!empty($_SESSION["contact"]["date2"])) echo $_SESSION["contact"]["date2"]; ?>" style="width:180px; margin: 8px;" />
       </td>
       </tr>
       <tr>
