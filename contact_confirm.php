@@ -42,17 +42,12 @@ $_SESSION['contact'] = [
 <link rel="stylesheet" href="./css/reset.css">
 <link rel="stylesheet" href="./css/style.css">
 <script src="https://kit.fontawesome.com/f273e6126d.js" crossorigin="anonymous"></script>
-<script type="text/javascript" src="./js/jquery-1.11.2.min.js"></script>
-<script type="text/javascript" src="./js/jquery.validate.js"></script>
-<script type="text/javascript" src="//jpostal-1006.appspot.com/jquery.jpostal.js"></script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 </head>
 
 <body id="index">
 <div id="wrapper">
-
-
 
 <!-- entryform -->
 <section class="">
@@ -107,15 +102,10 @@ $_SESSION['contact'] = [
       <tr>
         <td>アンケート</td>
         <td>当サイトをどこで知りましたか？<br/>
-        <?php foreach ($questions as  $question) : ?>
+          <?php foreach ($questions as  $question) : ?>
           <?php echo $question . " "; ?>
           <?php endforeach; ?>
-          </td>
-        <!-- <label><input type="checkbox" name="question[]" value="現地" /> 現地</label>
-        <label><input type="checkbox" name="question[]" value="折込チラシ" /> 折込チラシ</label>
-        <label><input type="checkbox" name="question[]" value="ネットの広告" /> ネットの広告</label>
-        <label><input type="checkbox" name="question[]" value="検索サイト" /> 検索サイト</label>
-        <label><input type="checkbox" name="question[]" value="その他" /> その他</label></td> -->
+        </td>
       </tr>
       <tr>
         <td>ご見学希望日</td>
@@ -134,15 +124,7 @@ $_SESSION['contact'] = [
       </div>
       </div>
 </section>
-
-
-
 <!--/wrapper--></div>
-
-<!--jQuery-->
-<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="js/script.js"></script>
-
 
 </body>
 </html>
