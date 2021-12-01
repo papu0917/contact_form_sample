@@ -118,6 +118,10 @@ $_SESSION['contact'] = [
         <label><input type="checkbox" name="question[]" value="その他" /> その他</label></td> -->
       </tr>
       <tr>
+        <td>ご見学希望日</td>
+        <td>希望日&#9312; <input name="date1" class="date" type="hidden"  style="width:180px; margin: 8px;" /><?php echo $date1 ?> <br>希望日&#9313; <input name="date2" class="date" type="hidden" style="width:180px; margin: 8px;" /><?php echo $date2 ?></td>
+      </tr>
+      <tr>
         <td>その他ご要望等</td>
         <td><input type="hidden" name="message" cols="35" rows="8"><?php echo $message; ?></td>
       </tr>
