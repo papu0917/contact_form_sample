@@ -1,6 +1,10 @@
 <?php
 session_start();
 
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+  header('Location: /contact_form_sample/contact_form.php');
+}
+
 $lastName = filter_input(INPUT_POST, 'lastname');
 $firstName = filter_input(INPUT_POST, 'firstname');
 $tel = filter_input(INPUT_POST, 'tel');
