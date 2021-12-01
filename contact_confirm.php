@@ -60,7 +60,7 @@ $_SESSION['contact'] = [
       <h2 class="lp-title entryform">お問い合わせ内容確認</h2>
       <div class="main-entryform-001">
       <p class="text-001"></p>
-      <form id="entryform" method="post" action="./contact_confirm.php">
+      <form id="entryform" method="post" action="./mail_sent.php">
       <table>
       <tbody>
       <tr>
