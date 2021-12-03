@@ -56,7 +56,7 @@ $_SESSION['contact'] = [
 <!-- entryform -->
 <section class="">
   <div class="entryform confirm">
-      <h2 class="lp-title entryform">お問い合わせ内容確認</h2>
+      <h2 class="lp-title entryform">来園予約内容確認</h2>
       <div class="main-entryform-001">
       <p class="text-001"></p>
       <form id="entryform" method="post" action="./mail_sent.php">
