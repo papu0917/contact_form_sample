@@ -26,6 +26,7 @@ $hourList2 = [
   '0' => '時間を選択', '1' => '9時~', '2' => '10時~', '3' => '11時~',
   '4' => '12時~', '5' => '13時~', '6' => '14時~', '7' => '15時~', '8' => '16時~',
 ];
+
 /**
  * チェックボックスの内容がセッションの情報と合っているかをif文でチェックしている
  */
@@ -182,62 +183,62 @@ var picker = new Pikaday({
 <section class="">
   <div class="entryform">
     <h2 class="lp-title entryform">来園予約フォーム</h2>
-      <div class="main-entryform-001">
+    <div class="main-entryform-001">
       <p class="text-001"><br>下記のフォームに必要事項をご入力の上、最後に確認ボタンを押してください。</p>
       <form id="entryform" method="post" action="./confirm.php">
-      <table>
-      <tbody>
-      <tr>
-      <td>お名前 <span>必須</span></td>
-      <td>
-        <dl>
-          <dt>姓</dt>
+        <table>
+          <tbody>
+            <tr>
+              <td>お名前 <span>必須</span></td>
+              <td>
+                <dl>
+                  <dt>姓</dt>
                   <dd><input type="text" name="lastname" value="<?php if (!empty($_SESSION["contact"]["lastName"])) echo $_SESSION["contact"]["lastName"]; ?>" style="width:180px;" /></dd>
-          <dt>名</dt>
+                  <dt>名</dt>
                   <dd><input type="text" name="firstname" value="<?php if (!empty($_SESSION["contact"]["firstName"])) echo $_SESSION["contact"]["firstName"]; ?>" style="width:180px;" /></dd>
-        </dl>
-      </td>
-      </tr>
-      <tr>
-      <td>電話番号 <span>必須</span></td>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <td>電話番号 <span>必須</span></td>
               <td><input type="tel" name="tel" value="<?php if (!empty($_SESSION["contact"]["tel"])) echo $_SESSION["contact"]["tel"]; ?>"/></td>
-      </tr>
-      <tr>
-      <td>メールアドレス <span>必須</span></td>
+            </tr>
+            <tr>
+              <td>メールアドレス <span>必須</span></td>
               <td><input type="email" name="email" value="<?php if (!empty($_SESSION["contact"]["email"])) echo $_SESSION["contact"]["email"]; ?>" /></td>
-      </tr>
-      <tr>
+            </tr>
+            <tr>
               <td>郵便番号 </td>
               <td><input type="text" name="zip" id="postcode1"  value="<?php if (!empty($_SESSION["contact"]["zip"])) echo $_SESSION["contact"]["zip"]; ?>"/></td>
-      </tr>
-      <tr>
+            </tr>
+            <tr>
               <td>都道府県 </td>
-      <td>
-        <select name="state" id="address1">
-        <?php
-          foreach ($stateList as $state) {
-            if ($state == $_SESSION["contact"]['state']) {
+              <td>
+                <select name="state" id="address1">
+                  <?php
+                    foreach ($stateList as $state) {
+                      if ($state == $_SESSION["contact"]['state']) {
                         echo "<option value='$state' selected>" . $state . "</option>";
-            } else {
+                      } else {
                         echo "<option value='$state'>" . $state . "</option>";
-            }
-          }
-        ?>
-        </select>
-      </td>
-      </tr>
-      <tr>
+                      }
+                    }
+                  ?>
+                </select>
+              </td>
+            </tr>
+            <tr>
               <td>市区町村・番地 </td>
               <td><input type="text" name="city" id="address2"  value="<?php if (!empty($_SESSION["contact"]["city"])) echo $_SESSION["contact"]["city"]; ?>"/></td>
-      </tr>
-      <tr>
+            </tr>
+            <tr>
               <td>建物名・部屋番号</td><td><input type="text" name="address" value="<?php if (!empty($_SESSION["contact"]["address"])) echo $_SESSION["contact"]["address"]; ?>"/></td>
-      </tr>
-      <tr>
+            </tr>
+            <tr>
               <td>来園希望日</td>
               <td>ご見学希望日をご入力ください
                 <br>第1希望日時 
-            <input name="date1" class="date" type="text" placeholder="日付を選択してください" value="<?php if (!empty($_SESSION["contact"]["date1"])) echo $_SESSION["contact"]["date1"]; ?>" style="width:180px; margin: 8px;" /> 
+                <input name="date1" class="date" type="text" placeholder="日付を選択してください" value="<?php if (!empty($_SESSION["contact"]["date1"])) echo $_SESSION["contact"]["date1"]; ?>" style="width:180px; margin: 8px;" />
                 <select name="hour1">
                   <?php
                     foreach ($hourList1 as $hour1) {
@@ -250,7 +251,7 @@ var picker = new Pikaday({
                   ?>
                 </select>
                 <br>第2希望日時
-            <input name="date2" class="date" type="text" placeholder="日付を選択してください" value="<?php if (!empty($_SESSION["contact"]["date2"])) echo $_SESSION["contact"]["date2"]; ?>" style="width:180px; margin: 8px;" />
+                <input name="date2" class="date" type="text" placeholder="日付を選択してください" value="<?php if (!empty($_SESSION["contact"]["date2"])) echo $_SESSION["contact"]["date2"]; ?>" style="width:180px; margin: 8px;" />
                 <select name="hour2">
                   <?php
                     foreach ($hourList2 as $hour2) {
@@ -264,23 +265,21 @@ var picker = new Pikaday({
                 </select>
                 <br /><span class="color">※明後日以降の日付をご入力ください。</span>
                 <br /><span class="color">※ご希望日が本日・明日の場合はお電話にてご予約ください。</span>
-        </td>
-      </tr>
-      <tr>
+              </td>
+            </tr>
+            <tr>
             <td>ご要望等</td>
-      <td><textarea name="message" cols="35" rows="8" ><?php if (!empty($_SESSION["contact"]["message"])) echo $_SESSION["contact"]["message"]; ?></textarea></td>
-      
-      </tr>
-      </tbody>
-      </table>
-      <p>ご入力いただきました個人情報等の内容は、厳重に管理いたします。</p>
-      <div class="submit"><input type="submit" value="確認する" /></div>
+              <td><textarea name="message" cols="35" rows="8" ><?php if (!empty($_SESSION["contact"]["message"])) echo $_SESSION["contact"]["message"]; ?></textarea></td>
+            </tr>
+          </tbody>
+        </table>
+        <p>ご入力いただきました個人情報等の内容は、厳重に管理いたします。</p>
+        <div class="submit"><input type="submit" value="確認する" /></div>
       </form>
-      </div>
-      </div>
+    </div>
+  </div>
 </section>
-</section>
-</main>
+
 <!--/wrapper--></div>
 
 <!-- jQueryUI DatePicker -->
