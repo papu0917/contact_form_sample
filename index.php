@@ -192,38 +192,34 @@ var picker = new Pikaday({
       <td>
         <dl>
           <dt>姓</dt>
-          <dd><input type="text" name="lastname" value="<?php if (!empty($_SESSION["contact"]["lastName"])) echo $_SESSION["contact"]["lastName"] ?>" style="width:180px;" /></dd>
+                  <dd><input type="text" name="lastname" value="<?php if (!empty($_SESSION["contact"]["lastName"])) echo $_SESSION["contact"]["lastName"]; ?>" style="width:180px;" /></dd>
           <dt>名</dt>
-          <dd><input type="text" name="firstname" value="<?php if (!empty($_SESSION["contact"]["firstName"])) echo $_SESSION["contact"]["firstName"] ?>" style="width:180px;" /></dd>
+                  <dd><input type="text" name="firstname" value="<?php if (!empty($_SESSION["contact"]["firstName"])) echo $_SESSION["contact"]["firstName"]; ?>" style="width:180px;" /></dd>
         </dl>
       </td>
       </tr>
-      <!--
-      <tr>
-      <td>性別 <span>必須</span></td><td><label><input type="radio" name="gender" value="男性" checked="checked" /> 男性</label> <label><input type="radio" name="gender" value="女性" /> 女性</label></td>
-      </tr>-->
       <tr>
       <td>電話番号 <span>必須</span></td>
-      <td><input type="tel" name="tel" value="<?php if (!empty($_SESSION["contact"]["tel"])) echo $_SESSION["contact"]["tel"] ?>"/></td>
+              <td><input type="tel" name="tel" value="<?php if (!empty($_SESSION["contact"]["tel"])) echo $_SESSION["contact"]["tel"]; ?>"/></td>
       </tr>
       <tr>
       <td>メールアドレス <span>必須</span></td>
-      <td><input type="email" name="email" value="<?php if (!empty($_SESSION["contact"]["email"])) echo $_SESSION["contact"]["email"] ?>" /></td>
+              <td><input type="email" name="email" value="<?php if (!empty($_SESSION["contact"]["email"])) echo $_SESSION["contact"]["email"]; ?>" /></td>
       </tr>
       <tr>
-      <td>郵便番号 <span>必須</span></td>
-      <td><input type="text" name="zip" id="postcode1"  value="<?php if (!empty($_SESSION["contact"]["zip"])) echo $_SESSION["contact"]["zip"] ?>"/></td>
+              <td>郵便番号 </td>
+              <td><input type="text" name="zip" id="postcode1"  value="<?php if (!empty($_SESSION["contact"]["zip"])) echo $_SESSION["contact"]["zip"]; ?>"/></td>
       </tr>
       <tr>
-      <td>都道府県 <span>必須</span></td>
+              <td>都道府県 </td>
       <td>
         <select name="state" id="address1">
         <?php
           foreach ($stateList as $state) {
             if ($state == $_SESSION["contact"]['state']) {
-              echo "<option value='$state' selected>".$state."</option>";
+                        echo "<option value='$state' selected>" . $state . "</option>";
             } else {
-              echo "<option value='$state'>".$state."</option>";
+                        echo "<option value='$state'>" . $state . "</option>";
             }
           }
         ?>
@@ -231,33 +227,47 @@ var picker = new Pikaday({
       </td>
       </tr>
       <tr>
-      <td>市区町村・番地 <span>必須</span></td>
-      <td><input type="text" name="city" id="address2"  value="<?php if (!empty($_SESSION["contact"]["city"])) echo $_SESSION["contact"]["city"] ?>"/></td>
+              <td>市区町村・番地 </td>
+              <td><input type="text" name="city" id="address2"  value="<?php if (!empty($_SESSION["contact"]["city"])) echo $_SESSION["contact"]["city"]; ?>"/></td>
       </tr>
       <tr>
-      <td>建物名・部屋番号</td><td><input type="text" name="address" value="<?php if (!empty($_SESSION["contact"]["address"])) echo $_SESSION["contact"]["address"] ?>"/></td>
+              <td>建物名・部屋番号</td><td><input type="text" name="address" value="<?php if (!empty($_SESSION["contact"]["address"])) echo $_SESSION["contact"]["address"]; ?>"/></td>
       </tr>
       <tr>
-        <td>アンケート</td>
-        <td>当サイトをどこで知りましたか？<br>
-          <label><input type="checkbox" name="question[]" value="現地" <?php echo $question1 ?>/>現地</label>
-          <label><input type="checkbox" name="question[]" value="折込チラシ" <?php echo $question2 ?>/> 折込チラシ</label>
-          <label><input type="checkbox" name="question[]" value="ネットの広告" <?php echo $question3 ?>/> ネットの広告</label>
-          <label><input type="checkbox" name="question[]" value="検索サイト" <?php echo $question4 ?>/> 検索サイト</label>
-          <label><input type="checkbox" name="question[]" value="その他" <?php echo $question5 ?>/> その他</label>
-        </td>
-      </tr>
-      <tr>
-        <td>ご見学希望日</td>
-        <td>第2希望日までご入力ください。
-          <br>希望日&#9312; 
+              <td>来園希望日</td>
+              <td>ご見学希望日をご入力ください
+                <br>第1希望日時 
             <input name="date1" class="date" type="text" placeholder="日付を選択してください" value="<?php if (!empty($_SESSION["contact"]["date1"])) echo $_SESSION["contact"]["date1"]; ?>" style="width:180px; margin: 8px;" /> 
-          <br>希望日&#9313; 
+                <select name="hour1">
+                  <?php
+                    foreach ($hourList1 as $hour1) {
+                      if ($hour1 == $_SESSION["contact"]['hour1']) {
+                        echo "<option value='$hour1' selected>" . $hour1 . "</option>";
+                      } else {
+                        echo "<option value='$hour1'>" . $hour1 . "</option>";
+                      }
+                    }
+                  ?>
+                </select>
+                <br>第2希望日時
             <input name="date2" class="date" type="text" placeholder="日付を選択してください" value="<?php if (!empty($_SESSION["contact"]["date2"])) echo $_SESSION["contact"]["date2"]; ?>" style="width:180px; margin: 8px;" />
+                <select name="hour2">
+                  <?php
+                    foreach ($hourList2 as $hour2) {
+                      if ($hour2 == $_SESSION["contact"]['hour2']) {
+                        echo "<option value='$hour2' selected>" . $hour2 . "</option>";
+                    } else {
+                        echo "<option value='$hour2'>" . $hour2 . "</option>";
+                      }
+                    }
+                  ?>
+                </select>
+                <br /><span class="color">※明後日以降の日付をご入力ください。</span>
+                <br /><span class="color">※ご希望日が本日・明日の場合はお電話にてご予約ください。</span>
         </td>
       </tr>
       <tr>
-      <td>その他ご要望等</td>
+            <td>ご要望等</td>
       <td><textarea name="message" cols="35" rows="8" ><?php if (!empty($_SESSION["contact"]["message"])) echo $_SESSION["contact"]["message"]; ?></textarea></td>
       
       </tr>
