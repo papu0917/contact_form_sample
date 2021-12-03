@@ -15,7 +15,9 @@ $city = filter_input(INPUT_POST, 'city');
 $address = filter_input(INPUT_POST, 'address');
 $questions = filter_input(INPUT_POST, 'question', FILTER_DEFAULT,FILTER_REQUIRE_ARRAY);
 $date1 = filter_input(INPUT_POST, 'date1');
+$hour1 = filter_input(INPUT_POST, 'hour1');
 $date2 = filter_input(INPUT_POST, 'date2');
+$hour2 = filter_input(INPUT_POST, 'hour2');
 $message = filter_input(INPUT_POST, 'message');
 
 $_SESSION['contact'] = [
@@ -29,7 +31,9 @@ $_SESSION['contact'] = [
   'address' => $address,
   'questions' => $questions,
   'date1' => $date1,
+  'hour1' => $hour1,
   'date2' => $date2,
+  'hour2' => $hour2,
   'message' => $message
 ];
 
