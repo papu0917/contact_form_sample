@@ -1,9 +1,6 @@
 <?php
 session_start();
 
-/**
- *都道府県をforeachで表示するために配列にした 
- */
 $stateList = [
   '0' => '都道府県', '1'=>'北海道', '2'=>'青森県', '3'=>'岩手県', 
   '4'=>'宮城県', '5'=>'秋田県','6'=>'山形県', '7'=>'福島県', '8'=>'茨城県', 
@@ -26,28 +23,6 @@ $hourList2 = [
   '0' => '時間を選択', '1' => '9時~', '2' => '10時~', '3' => '11時~',
   '4' => '12時~', '5' => '13時~', '6' => '14時~', '7' => '15時~', '8' => '16時~',
 ];
-
-/**
- * チェックボックスの内容がセッションの情報と合っているかをif文でチェックしている
- */
-foreach ($_SESSION['contact']['questions'] as $question) {
-  if ($question === '現地') {
-    $question1 = 'checked';
-  }
-  if ($question === '折込チラシ') {
-    $question2 = 'checked';
-  }
-  if ($question === 'ネットの広告') {
-    $question3 = 'checked';
-  }
-  if ($question === '検索サイト') {
-    $question4 = 'checked';
-  }
-  if ($question === 'その他') {
-    $question5 = 'checked';
-  }
-}
-
 
 ?>
 <!DOCTYPE html>
@@ -174,10 +149,8 @@ var picker = new Pikaday({
 </script>
 </head>
 
-
 <body id="index">
 <div id="wrapper">
-
 
 <!-- entryform -->
 <section class="">
@@ -298,7 +271,6 @@ var picker = new Pikaday({
   }
   );
 </script>
-
 
 </body>
 </html>

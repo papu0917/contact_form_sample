@@ -2,55 +2,52 @@
 
 final class Input
 {
-    private $firstName;
     private $lastName;
+    private $firstName;
     private $tel;
     private $email;
     private $zip;
     private $state;
     private $city;
     private $address;
-    private $questions;
     private $date1;
     private $date2;
     private $message;
 
 
     public function __construct(
-        string $firstName,
         string $lastName,
+        string $firstName,
         string $tel,
         string $email,
         string $zip,
         string $state,
         string $city,
         string $address,
-        array $questions,
         string $date1,
         string $date2,
         string $message
     )
     {
-        $this->firstName = $firstName;
         $this->lastName = $lastName;
+        $this->firstName = $firstName;
         $this->tel = $tel;
         $this->email = $email;
         $this->zip = $zip;
-        $this->$state = $state;
+        $this->state = $state;
         $this->city = $city;
         $this->address = $address;
-        $this->questions = $questions;
         $this->date1 = $date1;
         $this->date2 = $date2;
         $this->message = $message;
     }
 
-    public function firstName(): string
+    public function lastName(): string
     {
         return $this->firstName;
     }
 
-    public function lastName(): string
+    public function firstName(): string
     {
         return $this->lastName;
     }
@@ -83,11 +80,6 @@ final class Input
     public function address(): string
     {
         return $this->address;
-    }
-
-    public function questions(): array
-    {
-        return $this->questions;
     }
 
     public function date1(): string

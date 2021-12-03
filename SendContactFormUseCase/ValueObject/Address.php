@@ -1,7 +1,5 @@
 <?php
 
-use Exception;
-
 final class Address
 {
     private $value;

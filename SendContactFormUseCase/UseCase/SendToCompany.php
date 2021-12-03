@@ -2,17 +2,48 @@
 
 final class SendToCompany
 {
-    private const COMPANY_EMAIL = 'hoge@example.com';
+    private const COMPANY_EMAIL = 'm.morita@daioh-ag.co.jp';
 
+    private $firstName;
+    private $lastName;
+    private $tel;
     private $email;
-    private $title;
-    private $content;
+    private $zip;
+    private $state;
+    private $city;
+    private $address;
+    private $questions;
+    private $date1;
+    private $date2;
+    private $message;
 
-    public function __construct(Email $email, Title $title, Content $content)
+    public function __construct(
+        FirstName $firstName,
+        LastName $lastName,
+        Tel $tel,
+        Email $email, 
+        zip $zip,
+        State $state,
+        City $city,
+        Address $address,
+        Question $questions,
+        DateOne $date1,
+        DateTwo $date2,
+        Message $message
+    )
     {
+        $this->firstName = $firstName;
+        $this->lastName = $lastName;
+        $this->tel = $tel;
         $this->email = $email;
-        $this->title = $title;
-        $this->content = $content;
+        $this->zip = $zip;
+        $this->$state = $state;
+        $this->city = $city;
+        $this->address = $address;
+        $this->questions = $questions;
+        $this->date1 = $date1;
+        $this->date2 = $date2;
+        $this->message = $message;
     }
 
     public function handler(): void
@@ -28,7 +59,7 @@ final class SendToCompany
     }
 
     /**
-     * ゆざに送りたいメッセじを作成する
+     * お問い合わせが来たときのメッセージを作成する
      *
      * @return void
      */
