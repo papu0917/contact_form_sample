@@ -40,7 +40,7 @@ $message = filter_input(INPUT_POST, 'message');
  * 
  * 正規表現をfilterNameメソッドで行っている
  */
-$outputErrorMessage = new OutputErrorMessage($firstName, $lastName, $tel, $email);
+$outputErrorMessage = new OutputErrorMessage($lastName, $firstName, $tel, $email);
 $outputErrorMessage->requiredItem();
 $outputErrorMessage->filterName();
 
