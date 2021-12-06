@@ -1,32 +1,99 @@
 <?php
 
-namespace SendContactFormUseCase\UseCase;
-
 final class Input
 {
-	private $email;
-	private $title;
-	private $content;
+    private $lastName;
+    private $firstName;
+    private $tel;
+    private $email;
+    private $zip;
+    private $state;
+    private $city;
+    private $address;
+    private $date1;
+    private $date2;
+    private $message;
 
-	public function __construct(string $email, string $title, string $content)
-	{
-		$this->email = $email;
-		$this->title = $title;
-		$this->content = $content;
-	}
 
-	public function email(): string
-	{
-		return $this->email;
-	}
+    public function __construct(
+        string $lastName,
+        string $firstName,
+        string $tel,
+        string $email,
+        string $zip,
+        string $state,
+        string $city,
+        string $address,
+        string $date1,
+        string $date2,
+        string $message
+    )
+    {
+        $this->lastName = $lastName;
+        $this->firstName = $firstName;
+        $this->tel = $tel;
+        $this->email = $email;
+        $this->zip = $zip;
+        $this->state = $state;
+        $this->city = $city;
+        $this->address = $address;
+        $this->date1 = $date1;
+        $this->date2 = $date2;
+        $this->message = $message;
+    }
 
-	public function title(): string
-	{
-		return $this->title;
-	}
+    public function lastName(): string
+    {
+        return $this->firstName;
+    }
 
-	public function content(): string
-	{
-		return $this->content;
-	}
+    public function firstName(): string
+    {
+        return $this->lastName;
+    }
+
+    public function tel(): string
+    {
+        return $this->tel;
+    }
+
+    public function email(): string
+    {
+        return $this->email;
+    }
+
+    public function zip(): string
+    {
+        return $this->zip;
+    }
+
+    public function state(): string
+    {
+        return $this->state;
+    }
+
+    public function city(): string
+    {
+        return $this->city;
+    }
+
+    public function address(): string
+    {
+        return $this->address;
+    }
+
+    public function date1(): string
+    {
+        return $this->date1;
+    }
+
+    public function date2(): string
+    {
+        return $this->date2;
+    }
+
+    public function message(): string
+    {
+        return $this->message;
+    }
 }
