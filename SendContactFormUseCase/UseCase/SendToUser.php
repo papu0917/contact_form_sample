@@ -1,16 +1,5 @@
 <?php
 
-// require __DIR__ . '/../ValueObject/FirstName.php';
-// require __DIR__ . '/../ValueObject/LastName.php';
-// require __DIR__ . '/../ValueObject/Tel.php';
-// require __DIR__ . '/../ValueObject/Email.php';
-// require __DIR__ . '/../ValueObject/Zip.php';
-// require __DIR__ . '/../ValueObject/State.php';
-// require __DIR__ . '/../ValueObject/City.php';
-// require __DIR__ . '/../ValueObject/Address.php';
-// require __DIR__ . '/../ValueObject/DateOne.php';
-// require __DIR__ . '/../ValueObject/DateTwo.php';
-// require __DIR__ . '/../ValueObject/Message.php';
 
 final class SendToUser
 {
