@@ -48,7 +48,7 @@ final class Input
 
     public function firstName(): string
     {
-        return $this->firstName();
+        return $this->firstName;
     }
 
     public function tel(): string
