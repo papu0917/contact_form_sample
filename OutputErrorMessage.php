@@ -14,11 +14,11 @@ final class OutputErrorMessage
         $this->tel = $tel;
         $this->email = $email;
     }
-    
+
     /**
      * message
      *
-     * @return void
+     *
      */
     public function requiredItem()
     {
@@ -31,7 +31,6 @@ final class OutputErrorMessage
     /**
      * filterName
      *
-     * @return void
      */
     public function filterName()
     {

@@ -14,7 +14,6 @@ final class Input
     private $date2;
     private $message;
 
-
     public function __construct(
         string $lastName,
         string $firstName,
@@ -44,12 +43,12 @@ final class Input
 
     public function lastName(): string
     {
-        return $this->firstName;
+        return $this->lastName;
     }
 
     public function firstName(): string
     {
-        return $this->lastName;
+        return $this->firstName();
     }
 
     public function tel(): string
