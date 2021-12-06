@@ -1,6 +1,5 @@
 <?php
 require __DIR__ . '/OutputErrorMessage.php';
-require __DIR__ . '/SendContactFormUseCase/UseCase/Interactor.php';
 
 session_start();
 unset($_SESSION['contact']);
@@ -35,7 +34,6 @@ $address = filter_input(INPUT_POST, 'address');
 $date1 = filter_input(INPUT_POST, 'date1');
 $date2 = filter_input(INPUT_POST, 'date2');
 $message = filter_input(INPUT_POST, 'message');
-
 
 /**
  * 必須項目に入力がない場合はメッセージをrequiredItemメソッドから取得している

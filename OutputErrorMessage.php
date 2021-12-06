@@ -31,7 +31,6 @@ final class OutputErrorMessage
     /**
      * filterName
      *
-     * 
      */
     public function filterName()
     {
@@ -41,6 +40,4 @@ final class OutputErrorMessage
             die;
         }
     }
-
-
 }

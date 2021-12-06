@@ -1,6 +1,5 @@
 <?php
 
-
 final class SendToUser
 {
     private const TITLE = 'お問い合わせありがとうございました。';
