@@ -1,5 +1,6 @@
 <?php
 require __DIR__ . '/OutputErrorMessage.php';
+require __DIR__ . '/SendContactFormUseCase/UseCase/Interactor.php';
 
 session_start();
 unset($_SESSION['contact']);
