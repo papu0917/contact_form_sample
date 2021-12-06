@@ -1,7 +1,5 @@
 <?php
 
-use Exception;
-
 final class LastName
 {
     private $value;

@@ -1,7 +1,5 @@
 <?php
 
-namespace SendContactFormUseCase\UseCase;
-
 final class Output
 {
     private $isSuccess;

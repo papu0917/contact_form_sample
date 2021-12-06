@@ -1,7 +1,5 @@
 <?php
 
-use Exception;
-
 final class DateOne
 {
     private $value;
